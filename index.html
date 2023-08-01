@@ -13,10 +13,11 @@
     </div>
     <div id="container"></div>
     <div id="specialButtons">
-        <button onclick="changeColor('black')">Black</button>
         <input onclick="changeColor(value)" type="color" id="colorpicker" value="#0000ff">
+        <button onclick="changeColor('black')">Black</button>
         <button onclick="changeColor('white')">Eraser</button>
-        <button onclick="changeColor('gray')">rainbow</button>
+        <button onclick="changeColor('random')">rainbow</button>
+        <button onclick="reset(container)">reset</button>
     </div>
     <script src="main.js"></script>
 </body>

@@ -22,3 +22,15 @@ h1{
     border: 1px solid;
     display: grid;
 }
+#specialButtons {
+    
+}
+#specialButtons button{
+    background-color: white;
+    padding: 5px;
+    font-size: 30px;
+    margin: 0px;
+}
+#specialButtons input {
+    margin-right: 49px;
+}

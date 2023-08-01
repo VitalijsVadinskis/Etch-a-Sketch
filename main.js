@@ -24,30 +24,20 @@ function getSize () {
 
     button.addEventListener('click', () => {
         grid.innerHTML = ''
-        gridSize(prompt(),)
+        gridSize(prompt())
     })
 }
 
 function getColor() {
-
-    this.style.backgroundColor = color;
+    if(color == 'random'){
+        //Generates and sets color as random color
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }else
+        this.style.backgroundColor = color;
 }
 
 function changeColor(choice){
     color = choice
 }
+
 getSize()
-
-// const squares = document.getElementsByClassName('square')
-
-// sizeButton.forEach(e => {
-
-//     e.addEventListener('click', function(){
-//          container.innerHTML = ''
-//          for(i = 0; i < e.value; i++){
-//             let div = document.createElement('div')
-//             div.className = 'square'
-//             container.appendChild(div)
-//          }
-//     })
-// })
