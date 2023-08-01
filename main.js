@@ -8,9 +8,14 @@ grid.style.gridTemplateRows = 'repeat(16, 1fr)';
 function createGrid() {
     for(i = 0; i < 256; i++){
         let square = document.createElement('div')
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black'
+        })
         grid.appendChild(square)
     }
 }
+
+
 
 createGrid()
 // const squares = document.getElementsByClassName('square')
