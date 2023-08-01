@@ -1,4 +1,5 @@
 const grid = document.getElementById('container')
+const button = document.getElementById('sizeButton')
 
 
 
@@ -23,8 +24,17 @@ function gridSize (a){
     } else 
         alert('choose size between 2 and 100')
 }
-const griddy = prompt()
-gridSize(griddy)
+
+function getSize () {
+    const button = document.getElementById('sizeButton')
+    button.addEventListener('click', () => {
+        gridSize(prompt())
+    })
+}
+
+
+getSize()
+
 // const squares = document.getElementsByClassName('square')
 
 // sizeButton.forEach(e => {
