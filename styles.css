@@ -19,18 +19,30 @@ h1{
     height: 500px;
     width: 500px;
     background-color: white;
-    border: 1px solid;
+    border: 3px solid;
+    border-collapse: collapse;
     display: grid;
+    margin-bottom: 10px;
 }
 #specialButtons {
-    
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    border: 3px solid;
+    border-collapse: collapse;
+    gap:2%
 }
-#specialButtons button{
+#specialButtons button, input{
     background-color: white;
     padding: 5px;
     font-size: 30px;
     margin: 0px;
 }
-#specialButtons input {
-    margin-right: 49px;
+#specialButtons .chooser{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
 }
