@@ -1,12 +1,13 @@
 const grid = document.getElementById('container')
-grid.style.gridTemplateColumns = 'repeat(16, 1fr)';
-grid.style.gridTemplateRows = 'repeat(16, 1fr)';
 
 
 
 
-function createGrid() {
-    for(i = 0; i < 256; i++){
+
+function createGrid(size) {
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    for(i = 0; i < size * size; i++){
         let square = document.createElement('div')
         square.addEventListener('mouseover', () => {
             square.style.backgroundColor = 'black'
@@ -15,9 +16,15 @@ function createGrid() {
     }
 }
 
-
-
-createGrid()
+function gridSize (a){
+    let size = a
+    if (a >= 2 || a <=100){
+        createGrid(a)
+    } else 
+        alert('choose size between 2 and 100')
+}
+const griddy = prompt()
+gridSize(griddy)
 // const squares = document.getElementsByClassName('square')
 
 // sizeButton.forEach(e => {
