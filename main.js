@@ -1,38 +1,41 @@
 const grid = document.getElementById('container')
-const button = document.getElementById('sizeButton')
-
-
-
-
+let color = 'black'
 
 function createGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for(i = 0; i < size * size; i++){
         let square = document.createElement('div')
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black'
-        })
+        square.addEventListener('mouseover', getColor)
+        square.style.backgroundColor = 'white'
         grid.appendChild(square)
     }
 }
 
 function gridSize (a){
-    let size = a
-    if (a >= 2 || a <=100){
-        createGrid(a)
-    } else 
+    if (a <= 1 || a >= 101){
         alert('choose size between 2 and 100')
+    } else 
+        createGrid(a)
 }
 
 function getSize () {
     const button = document.getElementById('sizeButton')
+
     button.addEventListener('click', () => {
-        gridSize(prompt())
+        grid.innerHTML = ''
+        gridSize(prompt(),)
     })
 }
 
+function getColor() {
 
+    this.style.backgroundColor = color;
+}
+
+function changeColor(choice){
+    color = choice
+}
 getSize()
 
 // const squares = document.getElementsByClassName('square')

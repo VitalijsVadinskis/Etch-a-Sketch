@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="header"><h1>Etch A Sketch!</h1></div>
     <div>
-        <button id="sizeButton" type="button">Change size</button>
+        <button id="sizeButton" type="button">Change grid size</button>
     </div>
     <div id="container"></div>
+    <div id="specialButtons">
+        <button onclick="changeColor('black')">Black</button>
+        <input onclick="changeColor(value)" type="color" id="colorpicker" value="#0000ff">
+        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="changeColor('gray')">rainbow</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
